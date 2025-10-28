@@ -2,11 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import dynamic from "next/dynamic";
-
-const PDFViewer = dynamic(() => import("../../components/PDFViewer"), {
-  ssr: false,
-});
 
 export default function NoteView() {
   const pathname = usePathname();
@@ -20,10 +15,15 @@ export default function NoteView() {
   }, [id]);
 
   if (!note) return <p style={{ color: "#888" }}>Loading…</p>;
-  console.log(note);
+
   return (
-    <main className="min-h-screen p-6">
-      <PDFViewer fileUrl={note.FileURL} />
+    <main className="min-h-screen">
+      {/* Use embed to display the PDF */}
+      <embed
+        src={note.FileURL}
+        type="application/pdf"
+        style={{ width: "100%", height: "100vh", border: " solid #ccc" }}
+      />
     </main>
   );
 }

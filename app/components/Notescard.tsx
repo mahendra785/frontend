@@ -23,12 +23,15 @@ export default function NoteCard({ note }: any) {
         </p>
 
         <div className="flex justify-between items-center mt-3">
-          <Link
-            href={`/notes/${note.ID}`}
-            className="text-sm underline"
-            style={{ color: "#6b59ff" }}
-          >
-            View
+          <Link href={`/notes/${note.ID}`} legacyBehavior>
+            <a
+              className="text-sm underline"
+              style={{ color: "#6b59ff" }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View
+            </a>
           </Link>
 
           <button className="text-lg" style={{ color: "#888" }}>
