@@ -16,6 +16,46 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    /* Custom color variables (match your Tailwind theme extend) */
+    --bg: #111111;
+    --card: #1b1b1b;
+    --border: #2a2a2a;
+    --text: #eaeaea;
+    --subtext: #888888;
+    --brand: #6b59ff;
+  }
+
+  /* Utility classes that map to those custom colors */
+  .bg-bg {
+    background-color: var(--bg) !important;
+  }
+  .bg-card {
+    background-color: var(--card) !important;
+  }
+  .border-col {
+    border-color: var(--border) !important;
+  }
+  .text-body {
+    color: var(--text) !important;
+  }
+  .text-sub {
+    color: var(--subtext) !important;
+  }
+  .text-brand {
+    color: var(--brand) !important;
+  }
+
+  /* Support for class-based dark mode (Tailwind's "dark" class) */
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --bg: #111111;
+    --card: #1b1b1b;
+    --border: #2a2a2a;
+    --text: #eaeaea;
+    --subtext: #888888;
+    --brand: #6b59ff;
   }
 }
 
@@ -23,4 +63,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #111;
+  color: #eaeaea;
 }

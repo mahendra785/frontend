@@ -1,10 +1,4 @@
-import "./globals.css";
 import { AuthProvider } from "./context/AuthContext";
-
-export const metadata = {
-  title: "Notes & Papers Manager",
-  description: "Organize your study notes with ease",
-};
 
 export default function RootLayout({
   children,
@@ -13,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-900">
+      <body>
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
