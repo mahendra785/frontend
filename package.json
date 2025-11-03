@@ -14,17 +14,20 @@
     "@fortawesome/react-fontawesome": "^3.1.0",
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/page-navigation": "^3.12.0",
+    "@react-pdf-viewer/thumbnail": "^3.12.0",
     "@react-pdf-viewer/toolbar": "^3.12.0",
     "@react-pdf-viewer/zoom": "^3.12.0",
     "axios": "^1.13.0",
     "next": "16.0.0",
     "pdfjs-dist": "^3.11.174",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "react-pdf-thumbnail": "^0.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pdfjs-dist": "^2.10.377",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

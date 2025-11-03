@@ -16,6 +16,7 @@ export default function Login() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
     });
+    router.push("/dashboard");
     const data = await res.json();
     if (data.token) {
       localStorage.setItem("token", data.token);
@@ -50,6 +51,7 @@ export default function Login() {
         <button
           className="w-full py-2 rounded text-white"
           style={{ background: "#6b59ff" }}
+          onClick={submit}
         >
           Login
         </button>
